@@ -1,0 +1,240 @@
+// Заголовки, общие БЄМ блоки и проче...
+.popup {
+    // .popup__wrapper
+
+    &__wrapper {
+    }
+
+    // .popup__content
+
+    &__content {
+        max-width: rem(460);
+        background-color: #f9f6f3;
+        border-radius: 0;
+        @include adaptiveValue("padding-left", 80, 20);
+        @include adaptiveValue("padding-right", 80, 20);
+        @include adaptiveValue("padding-top", 46, 20);
+        @include adaptiveValue("padding-bottom", 58, 20);
+    }
+
+    // .popup__close
+
+    &__close {
+        display: none;
+    }
+
+    // .popup__text
+
+    &__text {
+    }
+}
+.header-popup {
+    // .header-popup__title
+
+    &__title {
+        font-size: rem(30);
+        font-weight: 700;
+        line-height: math.div(42, 30);
+        padding-bottom: rem(15);
+        @include adaptiveValue("padding-bottom", 15, 5);
+    }
+
+    // .header-popup__subtitle
+
+    &__subtitle {
+        font-weight: 700;
+        line-height: math.div(24, 12);
+        text-transform: uppercase;
+        padding-bottom: rem(10);
+    }
+
+    // .header-popup__form
+
+    &__form {
+    }
+    // .header-popup__button
+    &__button {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        right: rem(15);
+        height: rem(42);
+    }
+    // .header-popup__service
+
+    &__service {
+    }
+
+    // .header-popup__button
+
+    &__button {
+    }
+}
+.form-popup {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: rem(9);
+    padding-bottom: rem(14);
+    // .form-popup__email
+
+    &__email {
+    }
+
+    // .form-popup__password
+
+    &__password {
+    }
+}
+.email {
+    position: relative;
+    width: 100%;
+    // .email__button
+
+    &__button {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        right: rem(15);
+        height: rem(42);
+        &::before {
+            font-size: rem(15);
+        }
+    }
+
+    // .email__input
+
+    &__input {
+        width: 100%;
+        background-color: #f9f6f3;
+        border: rem(2) solid $mainColor;
+        padding: rem(10) rem(17);
+        outline: 0;
+        &::placeholder {
+            font-weight: 700;
+            line-height: math.div(24, 12);
+            color: rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+        }
+    }
+}
+.password {
+    position: relative;
+    width: 100%;
+    // .password__button
+
+    &__button {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        right: rem(15);
+        height: rem(42);
+        &::before {
+            font-size: rem(15);
+        }
+    }
+
+    // .password__input
+
+    &__input {
+        width: 100%;
+        background-color: #f9f6f3;
+        border: rem(2) solid $mainColor;
+        padding: rem(10) rem(17);
+        outline: 0;
+        &::placeholder {
+            font-weight: 700;
+            line-height: math.div(24, 12);
+            color: rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+        }
+    }
+}
+.service-popup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: rem(20);
+    padding-bottom: rem(14);
+    // .service-popup__checkbox
+
+    &__checkbox {
+    }
+
+    // .service-popup__link
+
+    &__link {
+        font-weight: 700;
+        line-height: math.div(24, 14);
+        text-transform: uppercase;
+        &:link {
+            text-decoration: underline;
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.checkbox {
+    position: relative;
+    // .checkbox__input
+
+    &__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        &:checked + .checkbox__label:before {
+            @extend %ic;
+            @extend ._icon-cross;
+            color: $mainColor;
+        }
+    }
+
+    // .checkbox__label
+
+    &__label {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        gap: rem(12);
+        &:before {
+            content: "";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 rem(20);
+            width: rem(20);
+            height: rem(20);
+            background-color: #f9f6f3;
+            border: rem(2) solid #000101;
+        }
+    }
+
+    // .checkbox__text
+
+    &__text {
+        font-weight: 700;
+        line-height: math.div(24, 14);
+        text-transform: uppercase;
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $mainBrown;
+            }
+        }
+    }
+}
+
+.title {
+    font-weight: 700;
+    line-height: math.div(42, 30);
+    @include adaptiveValue("font-size", 30, 24);
+}
+.subtitle {
+    line-height: math.div(24 , 14);
+}
