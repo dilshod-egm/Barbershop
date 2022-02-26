@@ -1,3 +1,140 @@
 //====================================================================================================
+.footer {
+	height: 193px;
+	background: url(../img/icons/footer.jpg);
+	// .footer__container
+	
+	&__container {
+	max-width: $maxWidthContainer;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	@include adaptiveValue("margin-top", 59, 30);
+
+	}
+
+}
+.info-contact {
+	
+
+	// .info-contact__footer
+
+	&__footer {
+		font-family: PT Sans Narrow;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 24px;
+		color: #FFFFFF;
+	}
+
+	// .info-contact__bottom
+
+	&__bottom {
+	}
+}
+.footer-contact {
+	@media (max-width: 650px) {
+		margin-right: 50px;	
+	}
+}
+.top-contact {
+
+	// .top-contact__subtitle
+
+	&__subtitle {
+	}
+
+	// .top-contact__address
+
+	&__address {
+	}
+
+	// .top-contact__map
+
+	&__map{
+		text-decoration-line: underline;
+
+	}
+
+	// .top-contact__phone
+
+	&__phone {
+	}
+}
+.bottom-contact {
+
+	// .bottom-contact__subtitle
+
+	&__subtitle {
+	}
+
+	// .bottom-contact__hours
+
+	&__hours {
+	}
+}
+.footer-socialmedia {
+	text-align: center;
+	@media (max-width: 498px) {
+		margin-top: 18px;
+		text-align: left;	
+	}
+	// .footer-socialmedia__title
+
+	&__title {
+		font-family:$fontFamily;
+		font-style: normal;
+		font-weight: bold;
+		font-size: $fontSize;
+		line-height: 24px;
+		color: #FFFFFF;
+		margin-bottom: 12px;
+	}
+
+	// .footer-socialmedia__links
+
+	&__links {
+		width: 141px;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+
+.developers-link {
+		@media (max-width: 638px) {
+		margin-top: 18px;	
+	}
+	// .developers-link__title
+
+	&__title {
+		font-family: $fontFamily;
+		font-style: normal;
+		font-weight: bold;
+		font-size: $fontSize;
+		line-height: 24px;
+		color: #FFFFFF;
+		margin-bottom: 12px;
+	}
+
+	// .developers-link__btn
+
+	&__btn {
+		font-family: PT Sans Narrow;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 24px;
+		color: #FFFFFF;
+		width: 140px;
+		height: 43px;
+		background-color: $mainColor;
+
+	}
+}
 
 //====================================================================================================
+
+

@@ -380,6 +380,41 @@
     &__box {
     }
 
+.recording-contact {
+
+		// .recording-contact__selects
+
+		&__selects {
+		}
+}
+
+.select {
+
+		// .select__box
+
+		&__box {
+		}
+}
+.subtitle {
+}
+.select-box {
+
+		// .select-box__input
+
+	&__input {
+        width: 140px;
+        height: 43px;
+        background: #fff;
+        border: 2px solid #000101;
+        box-sizing: border-box;
+        padding-left: 17px;
+        padding-right: 17px;
+        @media (max-width: 960px) {
+           @include adaptiveValue("width", 400, 140);
+        }
+	}
+}
+
     // .select__subtitle
 
     &__subtitle {
